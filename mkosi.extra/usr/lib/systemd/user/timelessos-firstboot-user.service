@@ -1,10 +1,10 @@
 [Unit]
-Description=Instanciates EaterOS User
+Description=Instanciates TimelessOS User
 
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=eateros-firstboot-user
+ExecStart=/usr/lib/timeless-firstboot-user
 
 [Install]
 WantedBy=default.target

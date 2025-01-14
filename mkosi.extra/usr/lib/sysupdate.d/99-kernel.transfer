@@ -3,16 +3,16 @@ ProtectVersion=%A
 
 [Source]
 Type=url-file
-Path=https://eaterminer.tinoplay.eu/eateros/updates
-MatchPattern=EaterOS_@v.efi.zst
+Path=https://eaterminer.tinoplay.eu/TimelessOS/updates
+MatchPattern=TimelessOS_@v.efi.zst
 
 [Target]
 Type=regular-file
 Path=/boot/EFI/Linux
 PathRelativeTo=boot
-MatchPattern=EaterOS-@v+@l-@d.efi \
-             EaterOS-@v+@l.efi \
-             EaterOS-@v.efi
+MatchPattern=TimelessOS-@v+@l-@d.efi \
+             TimelessOS-@v+@l.efi \
+             TimelessOS-@v.efi
 Mode=0444
 TriesLeft=3
 TriesDone=0

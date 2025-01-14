@@ -1,5 +1,5 @@
 [Unit]
-Description=Instanciates EaterOS
+Description=Instanciates TimelessOS
 ConditionFirstBoot=yes
 Before=sddm.service
 Conflicts=sddm.service
@@ -7,7 +7,7 @@ Conflicts=sddm.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=eateros-firstboot
+ExecStart=/usr/lib/timeless/timeless-firstboot
 
 User=root
 TTYPath=/dev/tty1
@@ -19,4 +19,4 @@ UtmpIdentifier=tty1
 UtmpMode=user
 
 [Install]
-WantedBy=sddm.service
+WantedBy=default.target

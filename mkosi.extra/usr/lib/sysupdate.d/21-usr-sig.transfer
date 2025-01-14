@@ -3,13 +3,13 @@ ProtectVersion=%A
 
 [Source]
 Type=url-file
-Path=https://eaterminer.tinoplay.eu/eateros/updates
-MatchPattern=EaterOS-@v-usr.sig.zst
+Path=https://eaterminer.tinoplay.eu/TimelessOS/updates
+MatchPattern=TimelessOS-@v-usr.sig.zst
 
 [Target]
 Type=partition
 Path=auto
-MatchPattern=EaterOS-System-@v-Sig
+MatchPattern=TimelessOS-System-@v-Sig
 MatchPartitionType=usr-verity-sig
 PartitionFlags=0
 ReadOnly=1

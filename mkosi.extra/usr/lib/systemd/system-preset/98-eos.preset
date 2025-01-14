@@ -17,7 +17,7 @@ enable systemd-homed.service
 
 disable systemd-firstboot.service
 disable systemd-homed-firstboot.service
-enable eateros-firstboot.service
+enable timelessos-firstboot.service
 
 enable sddm.service
 

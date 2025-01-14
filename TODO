@@ -4,3 +4,4 @@
 * Remove systemd-boot "Arch Linux" entry
 * Automatic pulling provision-tool to `mkosi.extra/usr/bin/provisioning-tool` with CI
 * CI/CD
+* An actual logo, not just a magenta square.

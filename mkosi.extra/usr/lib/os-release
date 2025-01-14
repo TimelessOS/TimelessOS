@@ -1,5 +1,5 @@
-PRETTY_NAME="EaterOS"
-NAME="EaterOS"
-ID=eateros
+PRETTY_NAME="TimelessOS"
+NAME="TimelessOS"
+ID="timelessos"
 ID_LIKE=arch
 RELEASE_TYPE=stable
