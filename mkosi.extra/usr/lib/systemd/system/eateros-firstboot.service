@@ -1,0 +1,22 @@
+[Unit]
+Description=Instanciates EaterOS
+ConditionFirstBoot=yes
+Before=sddm.service
+Conflicts=sddm.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=eateros-firstboot
+
+User=root
+TTYPath=/dev/tty1
+StandardInput=tty
+
+UnsetEnvironment=TERM
+
+UtmpIdentifier=tty1
+UtmpMode=user
+
+[Install]
+WantedBy=sddm.service

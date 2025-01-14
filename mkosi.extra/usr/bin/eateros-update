@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+flatpak update
+updatectl check
+updatectl update

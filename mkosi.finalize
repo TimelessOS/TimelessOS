@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Copy files to /usr/share/factory/etc
+cp --archive --no-target-directory "$BUILDROOT/etc" "$BUILDROOT/usr/share/factory/etc"
+
+# Symlink sudo to run0
+ln -s "$BUILDROOT/usr/bin/run0" "$BUILDROOT/usr/bin/sudo"
+# SDDM Should be the default display-manager
+ln -s "$BUILDROOT/usr/lib/systemd/system/sddm.service" "$BUILDROOT/usr/lib/systemd/system/display-manager.service"
+
+# Remove garbage desktop entries
+rm "$BUILDROOT/usr/share/applications/vim.desktop"
+rm "$BUILDROOT/usr/share/applications/hplip.desktop"
+rm "$BUILDROOT/usr/share/applications/hp-uiscan.desktop"
+rm "$BUILDROOT/usr/share/applications/qv4l2.desktop"
+rm "$BUILDROOT/usr/share/applications/avahi-discover.desktop"
+rm "$BUILDROOT/usr/share/applications/htop.desktop"

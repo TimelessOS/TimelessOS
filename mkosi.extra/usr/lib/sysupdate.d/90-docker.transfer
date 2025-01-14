@@ -1,0 +1,15 @@
+[Transfer]
+Features=docker
+ProtectVersion=%A
+
+[Source]
+Type=url-file
+Path=https://eaterminer.tinoplay.eu/eateros/updates
+MatchPattern=docker_@v.raw.zstd
+
+
+[Target]
+Type=regular-file
+Path=/home/extensions/
+MatchPattern=docker_@v.raw
+InstancesMax=2

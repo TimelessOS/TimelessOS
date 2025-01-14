@@ -1,0 +1,15 @@
+[Transfer]
+Features=podman
+ProtectVersion=%A
+
+[Source]
+Type=url-file
+Path=https://eaterminer.tinoplay.eu/eateros/updates
+MatchPattern=podman_@v.raw.zstd
+
+
+[Target]
+Type=regular-file
+Path=/home/extensions/
+MatchPattern=podman_@v.raw
+InstancesMax=2

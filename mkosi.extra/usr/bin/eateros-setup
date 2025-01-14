@@ -1,0 +1,3 @@
+#!/bin/bash
+
+kwin_wayland --no-global-shortcuts --no-lockscreen --locale1 provisioning-tool

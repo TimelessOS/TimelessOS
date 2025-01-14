@@ -1,0 +1,19 @@
+[Transfer]
+ProtectVersion=%A
+
+[Source]
+Type=url-file
+Path=https://eaterminer.tinoplay.eu/eateros/updates
+MatchPattern=EaterOS_@v.efi.zst
+
+[Target]
+Type=regular-file
+Path=/boot/EFI/Linux
+PathRelativeTo=boot
+MatchPattern=EaterOS-@v+@l-@d.efi \
+             EaterOS-@v+@l.efi \
+             EaterOS-@v.efi
+Mode=0444
+TriesLeft=3
+TriesDone=0
+InstancesMax=2

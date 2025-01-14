@@ -1,0 +1,15 @@
+[Transfer]
+Features=gnome
+ProtectVersion=%A
+
+[Source]
+Type=url-file
+Path=https://eaterminer.tinoplay.eu/eateros/updates
+MatchPattern=gnome_@v.raw.zstd
+
+
+[Target]
+Type=regular-file
+Path=/home/extensions/
+MatchPattern=gnome_@v.raw
+InstancesMax=2

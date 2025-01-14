@@ -1,0 +1,15 @@
+[Transfer]
+ProtectVersion=%A
+
+[Source]
+Type=url-file
+Path=https://eaterminer.tinoplay.eu/eateros/updates
+MatchPattern=EaterOS-@v-usr.verity.zst
+
+[Target]
+Type=partition
+Path=auto
+MatchPattern=EaterOS-System-@v-Verity
+MatchPartitionType=usr-verity
+PartitionFlags=0
+ReadOnly=1

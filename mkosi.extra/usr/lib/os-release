@@ -1,0 +1,5 @@
+PRETTY_NAME="EaterOS"
+NAME="EaterOS"
+ID=eateros
+ID_LIKE=arch
+RELEASE_TYPE=stable

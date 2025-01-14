@@ -1,0 +1,10 @@
+[Unit]
+Description=Instanciates EaterOS User
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=eateros-firstboot-user
+
+[Install]
+WantedBy=default.target
