@@ -9,9 +9,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Run a multi-line script
+      - name: setup-mkosi
+        uses: systemd/mkosi@v24.3
+      - name: Build
         run: |
           cd $GITHUB_WORKSPACE
           ./build-server.sh
-# Potentially release the image?
