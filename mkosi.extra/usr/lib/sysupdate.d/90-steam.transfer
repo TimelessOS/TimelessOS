@@ -10,6 +10,6 @@ MatchPattern=steam_@v.raw.zstd
 
 [Target]
 Type=regular-file
-Path=/home/extensions/
+Path=/var/lib/extensions/
 MatchPattern=steam_@v.raw
 InstancesMax=2
