@@ -10,11 +10,12 @@ if [ ! -d "$MKOSI_DIR" ]; then
 fi
 
 # Clear old builds
-"$MKOSI_DIR/bin/mkosi" clean -f -f
+"$MKOSI_DIR/bin/mkosi" clean -f
 
 # Build
 time "$MKOSI_DIR/bin/mkosi" \
 	--compress-output=zstd \
 	--source-date-epoch=0 \
 	--seed=5678 \
+	--force
 # Most of these args are just reproducability.
