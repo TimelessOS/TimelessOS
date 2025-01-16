@@ -10,7 +10,7 @@ if [ ! -d "$MKOSI_DIR" ]; then
 fi
 
 # Clear old builds
-"$MKOSI_DIR/bin/mkosi" clean -f
+"$MKOSI_DIR/bin/mkosi" clean
 
 # Build
 time "$MKOSI_DIR/bin/mkosi" \
