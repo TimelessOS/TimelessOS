@@ -16,6 +16,5 @@ fi
 time "$MKOSI_DIR/bin/mkosi" \
 	--compress-output=zstd \
 	--source-date-epoch=0 \
-	--seed=5678 \
 	--force
 # Most of these args are just reproducability.
