@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Add flathub
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-flatpak install --assumeyes --noninteractive \
+flatpak install --assumeyes --noninteractive --user \
         org.kde.ark \
         org.kde.dolphin \
         org.videolan.VLC \

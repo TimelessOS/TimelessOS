@@ -1,26 +1,25 @@
 # Networking
+enable ModemManager.service
 enable NetworkManager.service
-enable NetworkManager-wait-online.service
 enable systemd-resolved.service
 
+# NTP
 enable systemd-timesyncd.service
 
-#disable avahi.*
-
-enable power-profiles-daemon.service
-
+# Printing
 enable cups.socket
 disable cups.service
 
+# Misc
 enable systemd-repart.service
 enable systemd-homed.service
-
-disable systemd-firstboot.service
-disable systemd-homed-firstboot.service
 enable timelessos-firstboot.service
-
 enable sddm.service
+enable power-profiles-daemon.service
 
-enable systemd-sysupdate
+# Disable Bad Homed-Firstboot
+disable systemd-homed-firstboot.service
+
+# Sysupdate
 enable systemd-sysupdate.timer
 disable systemd-sysupdate-reboot.timer

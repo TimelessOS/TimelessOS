@@ -3,9 +3,11 @@
 set -eux
 
 # Install MKOSI
-mkdir /tmp/mkosi -p
-git clone https://github.com/systemd/mkosi /tmp/mkosi || true
+MKOSI_DIR="/tmp/mkosi"
+if [ ! -d "$MKOSI_DIR" ]; then
+	mkdir -p "$MKOSI_DIR"
+	git clone https://github.com/systemd/mkosi "$MKOSI_DIR"
+fi
 
 # Build
-time /tmp/mkosi/bin/mkosi \
-   --dependency=base # Only build base.
+time "$MKOSI_DIR/bin/mkosi" --force

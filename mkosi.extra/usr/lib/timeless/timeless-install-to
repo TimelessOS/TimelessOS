@@ -3,4 +3,3 @@
 set -ex
 
 systemd-repart --dry-run=no --empty=allow /dev/$1
-# I am still debating whether to include --factory-reset=yes or not - EaterMiner
