@@ -17,4 +17,4 @@ rm "$BUILDROOT/usr/share/applications/avahi-discover.desktop"
 rm "$BUILDROOT/usr/share/applications/htop.desktop"
 
 # Pull provisioning-tool
-curl https://github.com/TimelessOS/Provisioning-Tool/releases/download/v0.1.0-alpha/provisioning-tool -o "$BUILDROOT/usr/lib/provisioning-tool/timeless/provisioning-tool"
+curl https://github.com/TimelessOS/Provisioning-Tool/releases/download/v0.1.0-alpha/provisioning-tool -o "$BUILDROOT/usr/lib/timeless/provisioning-tool"
