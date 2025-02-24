@@ -2,20 +2,17 @@
 
 set -eux
 
-# Install MKOSI
-MKOSI_DIR="/tmp/mkosi"
-if [ ! -d "$MKOSI_DIR" ]; then
-	mkdir -p "$MKOSI_DIR"
-	git clone https://github.com/systemd/mkosi "$MKOSI_DIR"
-fi
+./build.sh
 
-# Clear old builds
-"$MKOSI_DIR/bin/mkosi" clean
+# Delete all symlinks
+find mkosi.output -maxdepth 1 -type l -delete
 
-# Build
-time "$MKOSI_DIR/bin/mkosi" \
-	--compress-output=zstd \
-	--source-date-epoch=0 \
-	--force \
-	--checksum=true
-# Most of these args are just reproducability.
+# Delete all subdirs
+rm -rf -- mkosi.output/*/
+
+# Delete base garbage
+rm mkosi.output/base_*
+
+zstd --exclude-compressed *
+
+echo You should now copy the artifacts onto the development server. Upon testing, they should be moved onto the main server.

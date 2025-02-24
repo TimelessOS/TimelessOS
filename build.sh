@@ -10,4 +10,7 @@ if [ ! -d "$MKOSI_DIR" ]; then
 fi
 
 # Build
-time "$MKOSI_DIR/bin/mkosi" --force
+time "$MKOSI_DIR/bin/mkosi" \
+	--source-date-epoch=0 \
+	--force \
+	--checksum=true

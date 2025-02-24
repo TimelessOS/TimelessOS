@@ -1,0 +1,13 @@
+[Unit]
+Description=Install Default Apps
+ConditionPathExists=!/var/lib/.flatpaks-installed
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/lib/timeless/timeless-install-flatpaks
+
+[Install]
+WantedBy=default.target

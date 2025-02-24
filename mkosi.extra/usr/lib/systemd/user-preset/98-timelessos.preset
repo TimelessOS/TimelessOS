@@ -1,3 +1,2 @@
-enable pipewire.socket
-enable pipewire-pulse.socket
-enable timelessos-firstboot-user.service
+enable pipewire.service
+enable pipewire-pulse.service

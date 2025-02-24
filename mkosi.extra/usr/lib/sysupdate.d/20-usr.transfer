@@ -3,8 +3,8 @@ ProtectVersion=%A
 
 [Source]
 Type=url-file
-Path=https://eaterminer.tinoplay.eu/TimelessOS/updates
-MatchPattern=TimelessOS-@v-usr.zst
+Path=https://eaterminer.tinoplay.eu/updates
+MatchPattern=%M_@v.usr-%a.raw.zst
 
 [Target]
 Type=partition

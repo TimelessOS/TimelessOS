@@ -4,7 +4,7 @@ ProtectVersion=%A
 
 [Source]
 Type=url-file
-Path=https://eaterminer.tinoplay.eu/TimelessOS/updates
+Path=https://eaterminer.tinoplay.eu/updates
 MatchPattern=steam_@v.raw.zstd
 
 

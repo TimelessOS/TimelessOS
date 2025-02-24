@@ -1,4 +1,6 @@
 #!/bin/bash
 
+set -eux
+
 # Start setup
-/ust/lib/timeless/timeless-setup
+/usr/lib/timeless/timeless-setup

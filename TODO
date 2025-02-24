@@ -2,6 +2,8 @@
 * Test booting with multiple versions installed
 * Test Nvidia-sysext
 * Remove systemd-boot "Arch Linux" entry
-* Automatic pulling provision-tool to `mkosi.extra/usr/bin/provisioning-tool` with CI
 * CI/CD
 * An actual logo, not just a magenta square.
+* Integrate AnyDistro/RemoteAccel
+* darkman integration (OPTIONAL OFC)
+* Mediacenter (Also consoleish edition?)

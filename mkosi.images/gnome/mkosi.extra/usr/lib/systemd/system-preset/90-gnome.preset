@@ -1,0 +1,5 @@
+enable gdm.service
+enable colord.service
+enable accounts-daemon.service
+
+disable sddm

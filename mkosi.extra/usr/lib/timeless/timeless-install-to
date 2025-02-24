@@ -1,5 +1,5 @@
 #!/bin/bash
 
-set -ex
+set -eux
 
 systemd-repart --dry-run=no --empty=allow /dev/$1
