@@ -1,9 +1,0 @@
-* Build server/Update distribution server
-* Test booting with multiple versions installed
-* Test Nvidia-sysext
-* Remove systemd-boot "Arch Linux" entry
-* CI/CD
-* An actual logo, not just a magenta square.
-* Integrate AnyDistro/RemoteAccel
-* darkman integration (OPTIONAL OFC)
-* Mediacenter (Also consoleish edition?)

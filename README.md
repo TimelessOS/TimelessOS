@@ -1,33 +1,43 @@
-This is designed as a system that is robust and purely functional.
-Infact, there isn't even an installer process. It just creates partitions as needed. This is a provision based process compared to traditional installer based tools, which just goes to show how much we value the future and refuse to stagnate.
+# TimelessOS
 
-It's made to be perfect and usable for everyone, including grandmas and advanced system designers.
+TimelessOS is a simple, robust Operating System based on the principal that it **just works**.
 
-Theres a couple of key differences between traditional linux distros and this one.
-1. Immutablity
-The system is completely immutable, you ***cannot*** break it without deleting partitions or other extremes.
-This also means an attacker cannot masquerade as an official part of the OS, and it can't corrupt itself, nor can you break it.
-2. A/B Updates
-Failed updates? No problem! Infact you can literally pull the power plug while updating. They download and update partitions in a either 100% working fashion, or a completely rolled back format. If an update fails, it will be automatically rolled back, if it didn't fail but it has something you don't like, you can easily rollback at any point!
-A large cause of linux being an "advanced users only" thing is because of upgrade conflicts, but those simply cannot happen with A/B updates.
-3. Secure
-Open source, you can read the code. Infact just scroll a little up and you will see all the code
-Immutable, signed from the get go. This is probably one of the only distros that is immutable and uses secure boot correctly, as in most distros it's currently a security theature.
-Everything has to be signed that runs. An attacker can't just put in a virus and call it "/usr/bin/bash", nor can they do it on an application level. You still can if you want too, we don't force them to pay or anywhere near MacOS's level of insanity.
-4. Modern
-Windows itself is bloated with outdated features, outdated everything basically. MacOS is better, but it still isn't good on that side. Most linux distros are the most stagnant things imaginable, They decided to switch to wayland recently, a protocol existing for more than 10 years. We take advantage of features such as `systemd-sysext`, `systemd-sysupdate`, `systemd-repart`, `systemd-run0`, and a load of rust based alternatives to system components.
-Infact open a PR with changing something to a better, more modern approach, and we will very likely merge it ***within the month.***
-This project moves faster than even SerpentOS.
+* Robust: Cannot, Will not, Shall not break
+* Simple: It's just like what you're used to, with a very small learning curve
+* Immutable: You can't break it, no matter how much little Timmy tries
+* Secure: Stay Safe while browsing the Internet
+
+## Status
+
+Early alpha. **Not recommended for general use.**
+
+## Building from source
+
+- Pull the repository.
+- Generate secureboot keys via `mkosi genkey`.
+- Build the image via mkosi using `mkosi --force`.
+- OPTIONAL: Update to the build using `mkosi sysupdate`. In the case the build failed or was faulty, rollback is possible via holding down ESC during boot to get to the bootloader.
+
+## Installation
+
+CAUTION: This is not ready for general use. Make sure you have another drive ready with another OS incase of OS failure.
+
+> Make sure that Secure Boot is in setup mode (You can change this in UEFI Firmware Interface) before starting installation!
+
+> We are aware of a bug affecting firstboot that affects the keyboard. We recommend setting passwords to a single letter and changing them after firstboot.
+
+### ISO Installation
+
+Burn the [ISO](https://eaterminer.tinoplay.eu/updates/TimelessOS_202502.raw) directly to the intended drive.
+Be careful not to burn to the wrong drive, and remember to backup your data.
+
+Booting via this drive will present you with firstboot, complete the instructions onscreen.
 
 
-### Robust but not stable, as stable will never move forward.
+### Replicated Installation (Recommended)
 
-# Requirements
-* 40GB Of Disk Space
-* x86-64 Dualcore CPU
-* 4GB Ram
+> Make sure to back up all important data on the target drive before running this command.
 
-## GPU Support
-* Integrated Graphics
-* AMD GCN 3+ (Effectively all GPU's past 2015)
-* NVIDIA Cards Newer than Turing are recommended, but older GPU's will still work flawlessly (Soon!)
+Open a terminal on the host system with the intended target drive attached, and run `systemd-repart --defer-partitions=swap,root /dev/<drive>` and review onscreen the changes proposed. If you are fine with these changes, run with  the `--dry-run=no` flag. This will "clone" the current installations system partitions, so make sure you're on the latest update.
+
+Booting via this drive will present you with firstboot, complete the instructions onscreen.

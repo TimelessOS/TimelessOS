@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mkdir "$BUILDROOT/usr/lib/pacman"
+mv "$BUILDROOT/var/lib/pacman/local" "$BUILDROOT/usr/lib/pacman"

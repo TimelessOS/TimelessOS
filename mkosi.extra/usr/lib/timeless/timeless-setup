@@ -1,5 +1,0 @@
-#!/bin/bash
-
-set -eux
-
-kwin_wayland --no-global-shortcuts --no-lockscreen --locale1 /usr/lib/timeless/provisioning-tool

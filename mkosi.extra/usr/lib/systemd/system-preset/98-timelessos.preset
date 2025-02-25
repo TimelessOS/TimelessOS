@@ -17,13 +17,10 @@ enable timelessos-firstboot.service
 enable sddm.service
 enable power-profiles-daemon.service
 
-# Disable Bad Homed-Firstboot
-disable systemd-homed-firstboot.service
+enable systemd-homed-firstboot.service
 
 # Sysupdate
 enable systemd-sysupdate.timer
 disable systemd-sysupdate-reboot.timer
 
 enable timelessos-install-flatpaks.service
-disable mandoc.service
-disable mandoc.timer

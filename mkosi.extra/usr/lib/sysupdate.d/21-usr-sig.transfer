@@ -2,7 +2,8 @@
 ProtectVersion=%A
 
 [Source]
-Type=url-filePath=https://eaterminer.tinoplay.eu/updates
+Type=url-file
+Path=https://eaterminer.tinoplay.eu/updates
 MatchPattern=%M_@v.usr-%a-verity-sig.raw.zst
 
 
