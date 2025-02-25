@@ -1,0 +1,16 @@
+[Transfer]
+ProtectVersion=%A
+
+[Source]
+Type=regular-file
+Path=/
+PathRelativeTo=explicit
+MatchPattern=%M_@v.usr-%a.raw.zst
+
+[Target]
+Type=partition
+Path=auto
+MatchPattern=TimelessOS-System-@v
+MatchPartitionType=usr
+PartitionFlags=0
+ReadOnly=1
