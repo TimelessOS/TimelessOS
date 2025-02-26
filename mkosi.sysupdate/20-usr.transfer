@@ -5,7 +5,7 @@ ProtectVersion=%A
 Type=regular-file
 Path=/
 PathRelativeTo=explicit
-MatchPattern=%M_@v.usr-%a.raw.zst
+MatchPattern=%M_@v.%a_@u.usr.raw
 
 [Target]
 Type=partition

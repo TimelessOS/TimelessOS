@@ -5,11 +5,11 @@ ProtectVersion=%A
 Type=regular-file
 Path=/
 PathRelativeTo=explicit
-MatchPattern=TimelessOS_@v.efi.zst
+MatchPattern=TimelessOS_@v.efi
 
 [Target]
 Type=regular-file
-Path=/boot/EFI/Linux
+Path=/EFI/Linux
 PathRelativeTo=boot
 MatchPattern=TimelessOS-@v+@l-@d.efi \
              TimelessOS-@v+@l.efi \

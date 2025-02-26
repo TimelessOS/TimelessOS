@@ -8,7 +8,7 @@ MatchPattern=TimelessOS_@v.efi.zst
 
 [Target]
 Type=regular-file
-Path=/boot/EFI/Linux
+Path=/EFI/Linux
 PathRelativeTo=boot
 MatchPattern=TimelessOS-@v+@l-@d.efi \
              TimelessOS-@v+@l.efi \

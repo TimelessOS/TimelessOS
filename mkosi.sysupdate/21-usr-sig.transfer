@@ -5,7 +5,7 @@ ProtectVersion=%A
 Type=regular-file
 Path=/
 PathRelativeTo=explicit
-MatchPattern=%M_@v.usr-%a-verity-sig.raw.zst
+MatchPattern=%M_@v.%a_@u.verity-sig.raw
 
 
 [Target]

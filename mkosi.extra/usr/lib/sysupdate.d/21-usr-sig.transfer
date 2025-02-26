@@ -4,8 +4,7 @@ ProtectVersion=%A
 [Source]
 Type=url-file
 Path=https://eaterminer.tinoplay.eu/updates
-MatchPattern=%M_@v.usr-%a-verity-sig.raw.zst
-
+MatchPattern=%M_@v.%a_@u.verity-sig.raw.zst
 
 [Target]
 Type=partition
