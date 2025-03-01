@@ -11,6 +11,11 @@ TimelessOS is a simple, robust Operating System based on the principal that it *
 
 Early alpha. **Not recommended for general use.**
 
+### Current known bugs:
+
+- TPM2 SHA PCR Banks do not work.
+- Sleeping can cause issues.
+
 ## Building from source
 
 - Pull the repository.
