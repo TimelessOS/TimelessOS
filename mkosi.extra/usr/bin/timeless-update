@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# Updates everything.
-
-flatpak update
-updatectl check
-updatectl update

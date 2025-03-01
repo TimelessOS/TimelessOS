@@ -1,0 +1,9 @@
+[Desktop Entry]
+Hidden=true
+Name=Reboot to Windows
+Comment=Finds your Windows installation and reboots to it
+Type=Application
+Terminal=false
+Icon=folder-windows-symbolic
+Categories=Utility;
+Exec=sh -c "pkexec /usr/bin/windows"
