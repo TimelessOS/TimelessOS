@@ -13,7 +13,7 @@ Early alpha. **Not recommended for general use.**
 
 ### Current known bugs:
 
-- TPM2 SHA PCR Banks do not work.
+- TPM2 SHA PCR Banks do not work (https://github.com/systemd/systemd/issues/36416). Please use no-encrypt for now.
 - Sleeping can cause issues.
 
 ## Building from source

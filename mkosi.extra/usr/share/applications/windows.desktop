@@ -6,4 +6,4 @@ Type=Application
 Terminal=false
 Icon=folder-windows-symbolic
 Categories=Utility;
-Exec=sh -c "pkexec /usr/bin/windows"
+Exec=sh -c "pkexec /usr/bin/windows
