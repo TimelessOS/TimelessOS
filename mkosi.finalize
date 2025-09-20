@@ -13,3 +13,18 @@ rm "$BUILDROOT/usr/share/applications/hp-uiscan.desktop"
 rm "$BUILDROOT/usr/share/applications/qv4l2.desktop"
 rm "$BUILDROOT/usr/share/applications/avahi-discover.desktop"
 rm "$BUILDROOT/usr/share/applications/htop.desktop"
+
+# Install Flint
+git clone https://github.com/TimelessOS/Flint
+pushd flint
+
+cargo build --release --all-features
+cp ./target/release/flint "$BUILDROOT/usr/bin/flint"
+
+FLINT_ROOT="$BUILDROOT/usr/share/factory/var/lib/flint/"
+mkdir -pv "$FLINT_ROOT"
+
+# Uncomment the following with whatever repo of your choice.
+# ./target/release/flint --root=$FLINT_ROOT repo add REPO_NAME REPO_URL
+
+popd
